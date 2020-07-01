@@ -1,17 +1,18 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from "../pages/home";
+import ResultsPage from "../pages/results";
+import { resultsUrl, homeUrl } from "./routes.json";
 
-const routes = [{ name: "home", path: "/", component: HomePage }];
+const routes = [{ name: "results", path: resultsUrl, component: ResultsPage }];
 
 const Router = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        {routes.map((route, key) => (
-          <Route  path={route.path} key={key} component={route.component} />
-        ))}
-      </Switch>
+      <Route exact path={homeUrl} component={HomePage} />
+      {routes.map((route, key) => (
+        <Route path={route.path} key={key} component={route.component} />
+      ))}
     </BrowserRouter>
   );
 };

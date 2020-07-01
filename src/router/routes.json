@@ -1,3 +1,5 @@
 {
-    "HOME": "/"
+    "homeUrl": "/",
+    "resultsRoute": "/results?movieName=",
+    "resultsUrl": "/results"
 }
