@@ -2,9 +2,13 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from "../pages/home";
 import ResultsPage from "../pages/results";
-import { resultsUrl, homeUrl } from "./routes.json";
+import DetailPage from "../pages/detail";
+import { resultsUrl, homeUrl, detailRoute } from "./routes.json";
 
-const routes = [{ name: "results", path: resultsUrl, component: ResultsPage }];
+const routes = [
+  { name: "results", path: resultsUrl, component: ResultsPage },
+  { name: "detail", path: detailRoute, component: DetailPage },
+];
 
 const Router = () => {
   return (

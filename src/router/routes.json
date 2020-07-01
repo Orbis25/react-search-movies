@@ -1,5 +1,6 @@
 {
     "homeUrl": "/",
     "resultsRoute": "/results?movieName=",
-    "resultsUrl": "/results"
+    "resultsUrl": "/results",
+    "detailRoute":"/detail/:id"
 }
